@@ -40,10 +40,10 @@ $(function() {
   	
   	Column.prototype = {
     	addCard: function(card) {
-      	this.$element.children('ul').append(card.$element);
+      		this.$element.children('ul').append(card.$element);
     	},
     	removeColumn: function() {
-      	this.$element.remove();
+      		this.$element.remove();
     	}
 	};
   	
@@ -60,7 +60,7 @@ $(function() {
 			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
 
 			$cardDelete.click(function(){
-        	self.removeCard();
+        		self.removeCard();
 			});
 
 			$card.append($cardDelete)
@@ -71,15 +71,15 @@ $(function() {
 
 	Card.prototype = {
 		removeCard: function() {
-		this.$element.remove();
+			this.$element.remove();
 		}
-	}
+	};
 
 	var board = {
     	name: 'Kanban Board',
     	addColumn: function(column) {
-      	this.$element.append(column.$element);
-      	initSortable();
+      		this.$element.append(column.$element);
+      		initSortable();
     	},
     	$element: $('#board .column-container')
 	};
@@ -119,4 +119,4 @@ $(function() {
 	doingColumn.addCard(card3);	
 	
 
-})
+});
